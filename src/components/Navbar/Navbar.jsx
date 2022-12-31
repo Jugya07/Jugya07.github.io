@@ -55,7 +55,8 @@ export const Navbar = () => {
         <NavItems name="Contact" />
         <div className="text-center">
           <a
-            href="resume/resume.pdf"
+            href="https://drive.google.com/file/d/1O16QmPk8CN2c2EZ7x7rgJ4SInsPnqb7_/view?usp=sharing"
+            target={"_blank"}
             download
             type="button"
             className="mt-3 lg:m-0 lg:absolute right-24 top-8 w-fit border border-gray-400  hover:text-red-500 dark:hover:text-secondary hover:border-red-500 dark:hover:border-secondary text-sm font-bold p-2 rounded-full dark:bg-secondary2"

@@ -2,8 +2,10 @@
   "name": "searchkaro",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://Jugya07.github.io/jugya7",
   "type": "module",
   "scripts": {
+    "deploy": "vite build && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -26,6 +28,7 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
     "autoprefixer": "^10.4.13",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.20",
     "react-error-overlay": "6.0.11",
     "tailwindcss": "^3.2.4",
