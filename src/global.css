@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&family=Poppins:wght@800&family=Roboto:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.name{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.animate::before {
+    content: attr(data-text);
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: text infinite 3s linear;
+  }
+  @keyframes text {
+    0%,
+    10%,
+    100% {
+      width: 0;
+    }
+    70%,
+    90% {
+      width: 100%;
+    }
+  }
+.animate1:before{
+  content: attr(data-text);
+  color: #68E0CF;
+  border-right: 4px solid #fff;
+}
+.animate2:before{
+  content: attr(data-text);
+  color: rgb(242, 60, 60);
+  border-right: 4px solid #000;
+}
+
+.title{
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon-style{
+  height: 30px;
+  animation: movebtn 3s ease-in-out infinite;
+}
+
+@keyframes movebtn {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(20px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+} 
+
+.i-style{
+  cursor: pointer;
+  animation: movebtn 3s ease-in-out infinite;
+  transition: all .5s ease-in-out;
+}
+.skillTitle{
+  font-family: 'Roboto', sans-serif;
+}
+
+.bar {
+  width: 2rem;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bar:before,.bar:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  transition: 0.7s;
+  border-radius: 5px;
+}
+
+.bar:before {
+  transform: translateY(-10px);
+}
+
+.bar:after {
+  transform: translateY(10px);
+}
+
+.bar.active {
+  transform: rotate(360deg);
+  background-color: transparent;
+
+}
+
+.bar.active:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+ .bar.active:after {
+  transform: translateY(0) rotate(-45deg);
+} 
