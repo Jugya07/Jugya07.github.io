@@ -10,6 +10,7 @@ export const ResultContextProvider = ({ children }) => {
   const [darkT, setDark] = useState(true);
   const [loading, setLoading] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [preLoad, setPreLoad] = useState(false);
   return (
     <ResultContext.Provider
       value={{
@@ -23,6 +24,8 @@ export const ResultContextProvider = ({ children }) => {
         skillSec,
         showNav,
         setShowNav,
+        preLoad,
+        setPreLoad,
       }}
     >
       {children}

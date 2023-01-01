@@ -11,18 +11,18 @@ import { Education } from "./components/EducationDiv/Education";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
 const App = () => {
-  const { darkT, loading, setLoading } = useResultContext();
+  const { darkT, preLoad, setPreLoad } = useResultContext();
   useEffect(() => {
-    setLoading(true);
+    setPreLoad(true);
     setTimeout(() => {
-      setLoading(false);
+      setPreLoad(false);
     }, 3000);
   }, []);
-  return loading ? (
+  return preLoad ? (
     <div className="flex justify-center h-screen items-center bg-primary ">
       <PropagateLoader
         color="#36d7b7"
-        loading={loading}
+        loading={preLoad}
         size={15}
         data-testid="loader"
       />

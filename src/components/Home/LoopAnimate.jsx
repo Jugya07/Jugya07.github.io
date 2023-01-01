@@ -6,7 +6,7 @@ export const LoopAnimate = () => {
   const array = [
     "Web developer",
     "Undergraduate in CSE",
-    "Music Lover",
+    "Cloud Enthusiast",
     "Learner",
   ];
 

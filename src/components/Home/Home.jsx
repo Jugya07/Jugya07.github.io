@@ -45,10 +45,11 @@ export const Home = () => {
           </h2>
         </div>
       </div>
-      <p className=" p-5 lg:pt-10 font-bold md:mx-14 lg:mx-40 text-center">
+      <p className=" p-5 lg:pt-10 font-bold md:mx-14 lg:mx-40 text-center tracking-wide">
         Hello! I am an undergraduate student with a keen interest for Web
-        Development. I love talking to new people and discuss about new ideas. I
-        have recently started with Machine Learning and loving it since.
+        Development. I like to explore new technologies and develop Web
+        Applications. I am looking for opportunities to work on and learn new
+        things.
       </p>
       <p className="w-fit mx-auto md:text-2xl dark:text-secondary text-red-500">
         Explore me !

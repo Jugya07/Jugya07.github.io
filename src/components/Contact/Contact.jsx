@@ -29,7 +29,6 @@ export const Contact = () => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    console.log(loading);
     const { name, email, message } = data;
     try {
       const templateParams = {

@@ -59,7 +59,7 @@ export const Navbar = () => {
             target={"_blank"}
             download
             type="button"
-            className="mt-3 lg:m-0 lg:absolute right-24 top-8 w-fit border border-gray-400  hover:text-red-500 dark:hover:text-secondary hover:border-red-500 dark:hover:border-secondary text-sm font-bold p-2 rounded-full dark:bg-secondary2"
+            className="mt-3 lg:mt-0 w-fit border border-gray-400  hover:text-red-500 dark:hover:text-secondary hover:border-red-500 dark:hover:border-secondary text-sm font-bold p-2 rounded-full dark:bg-secondary2"
           >
             Download Resume&nbsp;&nbsp;
             <FontAwesomeIcon icon={faDownload} size="1x" />
