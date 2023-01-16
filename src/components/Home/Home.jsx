@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import { LoopAnimate } from "./LoopAnimate";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import ScrollButton from "./ScrollButton";
 import { useResultContext } from "../../contexts/ResultContextProvider";
 import { ScrollTop } from "./ScrollTop";
+import Typed from "react-typed";
+
 import "../../global.css";
 
 export const Home = () => {
@@ -40,9 +41,20 @@ export const Home = () => {
           <h1 className="text-center name text-3xl md:text-5xl lg:text-6xl p-3 text-primary dark:text-white ">
             I am Jugya K. Gogoi
           </h1>
-          <h2 className="font-bold md:text-2xl dark:text-secondary text-primary transition delay-100">
-            <LoopAnimate />
-          </h2>
+          <Typed
+            className="font-bold md:text-2xl dark:text-secondary text-primary "
+            strings={[
+              "Web developer",
+              "Undergraduate in CSE",
+              "Cloud Enthusiast",
+              "Learner",
+            ]}
+            typeSpeed={60}
+            backSpeed={40}
+            loop
+          >
+            <input type="text" className="bg-transparent ml-3" />
+          </Typed>
         </div>
       </div>
       <p className=" p-5 lg:pt-10 font-bold md:mx-14 lg:mx-40 text-center tracking-wide">
