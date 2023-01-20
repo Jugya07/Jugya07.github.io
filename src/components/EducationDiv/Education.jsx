@@ -8,7 +8,7 @@ export const Education = () => {
       <h1 className="title text-3xl md:text-5xl mt-8 lg:mt-16 md:pb-10 text-center">
         Education
       </h1>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row justify-between">
         {education.map((edu) => (
           <EducationCard
             key={edu.key}

@@ -42,7 +42,7 @@ export const Home = () => {
             I am Jugya K. Gogoi
           </h1>
           <Typed
-            className="font-bold md:text-2xl dark:text-secondary text-primary "
+            className="font-bold md:text-2xl dark:text-secondary text-red-500"
             strings={[
               "Web developer",
               "Undergraduate in CSE",

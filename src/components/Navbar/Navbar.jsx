@@ -55,7 +55,7 @@ export const Navbar = () => {
         <NavItems name="Contact" />
         <div className="text-center">
           <a
-            href="https://drive.google.com/file/d/1O16QmPk8CN2c2EZ7x7rgJ4SInsPnqb7_/view?usp=sharing"
+            href="https://drive.google.com/file/d/1TIOF-UJ-OOoZTj-dmCCZaoAg0AfA1tpw/view?usp=sharing"
             target={"_blank"}
             download
             type="button"
