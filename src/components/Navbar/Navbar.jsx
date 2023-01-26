@@ -19,7 +19,7 @@ export const Navbar = () => {
   }, []);
   return (
     <div className="p-3 lg:p-5 dark:bg-secondary1 bg-gray-300 lg:dark:bg-transparent lg:bg-transparent mx-0 lg:mx-10 lg:pb-3 flex justify-between relative z-20 sticky top-0">
-      <div className="hidden lg:block absolute top-0 w-full h-5 dark:bg-primary bg-gray-200"></div>
+      {/* <div className="hidden lg:block absolute top-0 w-full h-5 dark:bg-primary bg-gray-200"></div> */}
       <div
         onClick={() => setShowNav(!showNav)}
         className="lg:hidden h-10 flex flex-col justify-center"
@@ -38,7 +38,7 @@ export const Navbar = () => {
         className={`${
           showNav ? "absolute left-0 top-full w-full" : " absolute -left-96"
         }
-         duration-300 h-screen  lg:h-fit  lg:static lg:flex  lg:justify-center lg:items-center lg:space-x-5 lg:w-screen bg-gray-300 dark:bg-secondary1 lg:p-4 lg:rounded-full`}
+         duration-300 h-screen  lg:h-fit  lg:static lg:flex  lg:justify-center lg:items-center lg:space-x-5 lg:w-screen bg-gray-300 dark:bg-secondary1 dark:lg:bg-transparent lg:border dark:lg:backdrop-blur-sm lg:p-4 lg:rounded-full`}
       >
         <NavItems name="Home" />
         <NavItems name="About" />
