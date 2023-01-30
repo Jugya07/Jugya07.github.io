@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact/Contact";
 import { About } from "./components/About/About";
 import { Skills } from "./components/Skills/Skills";
 import { Education } from "./components/EducationDiv/Education";
+import Fade from "react-reveal/Fade";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
 const App = () => {
@@ -32,12 +33,14 @@ const App = () => {
       <div className="bg-gray-200 dark:bg-primary dark:text-white text-primary relative">
         <Navbar />
         <Home />
-        <About />
-        <Education />
-        <Skills />
-        <Contact />
+        <Fade bottom distance="10%">
+          <About />
+          <Education />
+          <Skills />
+          <Contact />
+          <Footer />
+        </Fade>
         <Handles />
-        <Footer />
       </div>
     </div>
   );

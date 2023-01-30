@@ -16,6 +16,7 @@ specifiers:
   react-dom: ^18.2.0
   react-error-overlay: 6.0.11
   react-hook-form: ^7.41.1
+  react-reveal: ^1.2.2
   react-router-dom: ^6.6.0
   react-spinners: ^0.13.7
   react-toastify: ^9.1.1
@@ -32,6 +33,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.41.1_react@18.2.0
+  react-reveal: 1.2.2_react@18.2.0
   react-router-dom: 6.6.0_biqbaboplfbrettd7655fr4n2y
   react-spinners: 0.13.7_biqbaboplfbrettd7655fr4n2y
   react-toastify: 9.1.1_biqbaboplfbrettd7655fr4n2y
@@ -1400,6 +1402,15 @@ packages:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-reveal/1.2.2_react@18.2.0:
+    resolution: {integrity: sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw==}
+    peerDependencies:
+      react: ^15.3.0 || ^16.0.0
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /react-router-dom/6.6.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-qC4jnvpfCPKVle1mKLD75IvZLcbVJyFMlSn16WY9ZiOed3dgSmqhslCf/u3tmSccWOujkdsT/OwGq12bELmvjg==}
