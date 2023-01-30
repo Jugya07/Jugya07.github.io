@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import { useResultContext } from "../../contexts/ResultContextProvider";
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 
 export const Contact = () => {
   const { loading, setLoading, contactSec } = useResultContext();
@@ -54,7 +54,7 @@ export const Contact = () => {
 
   return (
     <div
-      className="lg:px-40 border-t pt-5 lg:mt-7 lg:pt-20 border-gray-400"
+      className="lg:px-40 border-t pt-5 lg:mt-7 lg:pt-20 border-yellow"
       ref={contactSec}
     >
       <h1 className="title text-3xl md:text-5xl pl-4 pb-4 text-center">

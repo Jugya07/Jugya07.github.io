@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import ScrollButton from "./ScrollButton";
-import { useResultContext } from "../../contexts/ResultContextProvider";
-import { ScrollTop } from "./ScrollTop";
+import { ScrollButton, ScrollTop } from "../../components";
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 import Typed from "react-typed";
-
 import "../../global.css";
 
 export const Home = () => {
@@ -28,7 +26,7 @@ export const Home = () => {
   }, []);
   return (
     <div
-      className="pt-4 lg:pt-10 lg:pb-10 border-b border-gray-400 flex flex-col"
+      className="pt-4 lg:pt-10 lg:pb-10 border-b border-yellow flex flex-col"
       ref={homeSec}
     >
       <div className="flex flex-col lg:flex-row justify-center items-center lg:mb-10">
@@ -53,7 +51,7 @@ export const Home = () => {
             backSpeed={40}
             loop
           >
-            <input type="text" className="bg-transparent ml-3" />
+            <input disabled className="bg-transparent ml-3" />
           </Typed>
         </div>
       </div>

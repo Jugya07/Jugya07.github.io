@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
-import { Home } from "./components/Home/Home";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Footer } from "./components/Footer";
-import { useResultContext } from "./contexts/ResultContextProvider";
-import { Handles } from "./components/Handles/Handles";
-import { Contact } from "./components/Contact/Contact";
-import { About } from "./components/About/About";
-import { Skills } from "./components/Skills/Skills";
-import { Education } from "./components/EducationDiv/Education";
 import Fade from "react-reveal/Fade";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import {
+  Home,
+  Navbar,
+  Handles,
+  Contact,
+  About,
+  Skills,
+  Education,
+} from "./components";
+import { useResultContext } from "./contextAPI/ResultContextProvider";
 
 const App = () => {
   const { darkT, preLoad, setPreLoad } = useResultContext();
@@ -38,7 +39,6 @@ const App = () => {
           <Education />
           <Skills />
           <Contact />
-          <Footer />
         </Fade>
         <Handles />
       </div>

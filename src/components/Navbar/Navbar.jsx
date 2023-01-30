@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavItems } from "./NavItems";
-import { useResultContext } from "../../contexts/ResultContextProvider";
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "../../global.css";
@@ -37,7 +37,7 @@ export const Navbar = () => {
         className={`${
           showNav ? "absolute left-0 top-full w-full" : " absolute -left-96"
         }
-         duration-300 h-screen  lg:h-fit  lg:static lg:flex  lg:justify-center lg:items-center lg:space-x-5 lg:w-screen bg-gray-300 dark:bg-secondary1 dark:lg:bg-transparent lg:border dark:lg:backdrop-blur-sm lg:p-4 lg:rounded-full`}
+         duration-300 h-screen  lg:h-fit  lg:static lg:flex  lg:justify-center lg:items-center lg:space-x-5 lg:w-screen bg-gray-300 dark:bg-secondary1  dark:lg:bg-transparent lg:bg-transparent lg:border border-yellow lg:backdrop-blur-md lg:p-4 lg:rounded-full`}
       >
         <NavItems name="Home" />
         <NavItems name="About" />
@@ -58,7 +58,7 @@ export const Navbar = () => {
             target={"_blank"}
             download
             type="button"
-            className="mt-3 lg:mt-0 w-fit border border-gray-400  hover:text-red-500 dark:hover:text-secondary hover:border-red-500 dark:hover:border-secondary text-sm font-bold p-2 rounded-full dark:bg-secondary2"
+            className="mt-3 lg:mt-0 w-fit border border-yellow hover:text-red-500 dark:hover:text-secondary hover:border-red-500 dark:hover:border-secondary text-sm font-bold p-2 rounded-full dark:bg-secondary2"
           >
             Download Resume&nbsp;&nbsp;
             <FontAwesomeIcon icon={faDownload} size="1x" />

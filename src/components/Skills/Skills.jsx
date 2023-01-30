@@ -1,13 +1,13 @@
 import React from "react";
-import { SkillItems } from "./SkillItems";
-import { webSkills } from "../../contents/skills";
-import { useResultContext } from "../../contexts/ResultContextProvider";
+import { SkillItems } from "../../components";
+import { webSkills } from "../../utils";
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 
 export const Skills = () => {
   const { skillSec } = useResultContext();
   return (
     <div
-      className="px-7 mt-4 lg:px-40 lg:mt-7 lg:py-16 border-t border-gray-400"
+      className="px-7 mt-4 lg:px-40 lg:mt-7 lg:py-16 border-t border-yellow"
       ref={skillSec}
     >
       <h1 className="title text-3xl md:text-5xl pb-5 p-5 text-center">

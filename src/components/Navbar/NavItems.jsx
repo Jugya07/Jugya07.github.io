@@ -1,5 +1,5 @@
 import React from "react";
-import { useResultContext } from "../../contexts/ResultContextProvider";
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 
 export const NavItems = ({ name }) => {
   const { homeSec, aboutSec, skillSec, contactSec, setShowNav } =

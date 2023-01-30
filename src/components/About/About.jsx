@@ -1,7 +1,7 @@
 import React from "react";
-import { useResultContext } from "../../contexts/ResultContextProvider";
-
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 import "../../global.css";
+
 export const About = () => {
   const { aboutSec } = useResultContext();
   return (

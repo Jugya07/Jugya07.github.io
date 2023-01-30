@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { useResultContext } from "../../contextAPI/ResultContextProvider";
 import "../../global.css";
-import { useResultContext } from "../../contexts/ResultContextProvider";
-const ScrollButton = () => {
+export const ScrollButton = () => {
   const { aboutSec } = useResultContext();
   const scrollDown = () => {
     aboutSec.current.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -18,4 +18,4 @@ const ScrollButton = () => {
     </button>
   );
 };
-export default ScrollButton;
+// export default ScrollButton;
