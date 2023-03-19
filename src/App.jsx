@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import "./global.css";
 import {
   Home,
   Navbar,
@@ -19,7 +20,22 @@ const App = () => {
     setTimeout(() => {
       setPreLoad(false);
     }, 3000);
+    const cursor = document.querySelector(".cursor");
+    window.addEventListener("pointermove", (event) => {
+      const { clientX, clientY } = event;
+      cursor.animate(
+        {
+          left: `${clientX}px`,
+          top: `${clientY}px`,
+        },
+        {
+          duration: 500,
+          fill: "forwards",
+        }
+      );
+    });
   }, []);
+
   return preLoad ? (
     <div className="flex justify-center h-screen items-center bg-primary ">
       <PropagateLoader
@@ -30,19 +46,22 @@ const App = () => {
       />
     </div>
   ) : (
-    <div className={darkT ? "dark" : ""}>
-      <div className="bg-gray-200 dark:bg-primary dark:text-white text-primary relative">
-        <Navbar />
-        <Home />
-        <Fade bottom distance="10%">
-          <About />
-          <Education />
-          <Skills />
-          <Contact />
-        </Fade>
-        <Handles />
+    <>
+      <div className={darkT && "cursor"}></div>
+      <div className={darkT ? "dark main" : "main"}>
+        <div className="bg-gray-200 dark:bg-primary dark:text-white text-primary relative">
+          <Navbar />
+          <Home />
+          <Fade bottom distance="10%">
+            <About />
+            <Education />
+            <Skills />
+            <Contact />
+          </Fade>
+          <Handles />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

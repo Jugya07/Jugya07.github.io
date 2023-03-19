@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useResultContext } from "../../contextAPI/ResultContextProvider";
 
 export const NavItems = ({ name }) => {
@@ -20,6 +20,7 @@ export const NavItems = ({ name }) => {
       break;
     default:
   }
+
   const scrollTo = () => {
     if (reference != aboutSec) {
       reference.current.scrollIntoView({
@@ -39,7 +40,9 @@ export const NavItems = ({ name }) => {
       onClick={scrollTo}
       className="pb-4 lg:pb-0 lg:w-fit text-center text-md md:text-2xl lg:text-base"
     >
-      <p className="w-fit m-auto py-1 px-3 text-primary rounded dark:text-white text-black hover:dark:text-secondary hover:text-red-500 cursor-pointer transition hover:duration-300">
+      <p
+        className={`w-fit m-auto py-1 px-3 text-primary rounded dark:text-white text-black hover:dark:text-secondary hover:text-red-500 cursor-pointer transition hover:duration-300`}
+      >
         {name}
       </p>
     </div>

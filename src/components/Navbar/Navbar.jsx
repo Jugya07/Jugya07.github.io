@@ -6,7 +6,17 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "../../global.css";
 
 export const Navbar = () => {
-  const { darkT, setDark, showNav, setShowNav } = useResultContext();
+  const {
+    darkT,
+    setDark,
+    showNav,
+    setShowNav,
+    aboutSec,
+    contactSec,
+    homeSec,
+    skillSec,
+  } = useResultContext();
+
   const [showName, setShowName] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,6 +27,7 @@ export const Navbar = () => {
       }
     });
   }, []);
+
   return (
     <div className="p-3 lg:p-5 dark:bg-secondary1 bg-gray-300 lg:dark:bg-transparent lg:bg-transparent mx-0 lg:mx-10 lg:pb-3 flex justify-between relative z-40 sticky top-0">
       <div
@@ -54,7 +65,7 @@ export const Navbar = () => {
         <NavItems name="Contact" />
         <div className="text-center">
           <a
-            href="https://drive.google.com/file/d/1TIOF-UJ-OOoZTj-dmCCZaoAg0AfA1tpw/view?usp=sharing"
+            href="https://drive.google.com/file/d/19s6JVZwtg_89smSfEYInmSGcjxuk9W12/view?usp=sharing"
             target={"_blank"}
             download
             type="button"

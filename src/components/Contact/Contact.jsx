@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
@@ -65,7 +64,7 @@ export const Contact = () => {
           <label className="flex flex-col mb-3">
             NAME:
             <input
-              className="mt-1 p-4 md:pl-6 lg:w-96 rounded-lg border dark:bg-primary dark:border-secondary appearance-none"
+              className="mt-1 p-4 md:pl-6 lg:w-96 rounded-lg border dark:bg-primary dark:border-secondary appearance-none z-10"
               type={"text"}
               name="name"
               placeholder={"Your Name"}
@@ -81,7 +80,7 @@ export const Contact = () => {
           {errors.name && (
             <span className="errorMessage">{errors.name.message}</span>
           )}
-          <label className=" flex flex-col  mb-3">
+          <label className=" flex flex-col  mb-3 z-10">
             EMAIL:
             <input
               className="mt-1 p-4 md:pl-6 rounded-lg border dark:bg-primary lg:w-96 dark:border-secondary"
@@ -100,7 +99,7 @@ export const Contact = () => {
               Please enter a valid email address
             </span>
           )}
-          <label className="flex flex-col  mb-3">
+          <label className="flex flex-col  mb-3 z-10">
             SUBJECT:
             <textarea
               className=" mt-1 p-4 md:pl-6 md:h-40 lg:w-96 rounded-lg border dark:bg-primary dark:border-secondary "
@@ -112,7 +111,7 @@ export const Contact = () => {
             />
           </label>
           <button
-            className="p-3 lg:mb-8 border w-fit rounded-full lg:m-5 border-gray-400 dark:border-secondary dark:hover:text-secondary hover:text-red-500 hover:border-red-500"
+            className="p-3 lg:mb-8 border w-fit rounded-full lg:m-5 border-gray-400 dark:border-secondary dark:hover:text-secondary hover:text-red-500 hover:border-red-500 z-10"
             type="submit"
           >
             Submit

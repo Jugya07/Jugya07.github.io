@@ -6,6 +6,7 @@
 
 *{
     font-family: 'Titillium Web', sans-serif;
+    /* cursor: none; */
 }
 
 .name{
@@ -116,3 +117,13 @@
  .bar.active:after {
   transform: translateY(0) rotate(-45deg);
 } 
+
+.cursor{
+  position: fixed;
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, darkorange);
+  z-index: 5;
+  filter: blur(100px);
+}

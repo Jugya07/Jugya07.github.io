@@ -64,7 +64,7 @@ export const Home = () => {
       <p className="w-fit mx-auto md:text-2xl dark:text-secondary text-red-500">
         Explore me !
       </p>
-      <div className={` w-fit m-auto my-5 md:my-10 h-10`}>
+      <div className={` w-fit m-auto my-5 md:my-10 h-10 z-10`}>
         {showDownBtn && <ScrollButton />}
       </div>
 

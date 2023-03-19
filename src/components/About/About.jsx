@@ -1,4 +1,3 @@
-import React from "react";
 import { useResultContext } from "../../contextAPI/ResultContextProvider";
 import "../../global.css";
 
