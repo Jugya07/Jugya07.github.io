@@ -21,7 +21,7 @@ export const NavItems = ({ name }) => {
     default:
   }
 
-  const scrollTo = () => {
+  const scrollTo = (e) => {
     if (reference != aboutSec) {
       reference.current.scrollIntoView({
         behavior: "smooth",
@@ -33,6 +33,7 @@ export const NavItems = ({ name }) => {
         block: "center",
       });
     }
+
     setShowNav(false);
   };
   return (

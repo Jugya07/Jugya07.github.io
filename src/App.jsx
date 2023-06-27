@@ -25,11 +25,11 @@ const App = () => {
       const { clientX, clientY } = event;
       cursor.animate(
         {
-          left: `${clientX}px`,
-          top: `${clientY}px`,
+          left: `${clientX - 20}px`,
+          top: `${clientY - 20}px`,
         },
         {
-          duration: 500,
+          duration: 200,
           fill: "forwards",
         }
       );
@@ -47,7 +47,7 @@ const App = () => {
     </div>
   ) : (
     <>
-      <div className={darkT && "cursor"}></div>
+      {/* <div className={darkT && "cursor"}></div> */}
       <div className={darkT ? "dark main" : "main"}>
         <div className="bg-gray-200 dark:bg-primary dark:text-white text-primary relative">
           <Navbar />

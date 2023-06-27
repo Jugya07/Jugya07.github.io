@@ -3,16 +3,43 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color:#242424;
+  /* cursor: none; */
+}
 
 *{
     font-family: 'Titillium Web', sans-serif;
-    /* cursor: none; */
 }
 
 .name{
     font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: animate 0.9s ease-out 1 forwards;
 }
 
+@keyframes animate {
+    0%{
+        transform: translateX(70px);
+    }
+    55%{
+      transform:translateX(-20px);
+    }
+    65%{
+      transform:translateX(16px);
+    }
+    75%{
+      transform:translateX(-10px);
+    }
+    85%{
+      transform:translateX(6px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+}
 
 .animate::before {
     content: attr(data-text);
@@ -120,10 +147,17 @@
 
 .cursor{
   position: fixed;
-  width: 10rem;
+  width: 40px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, darkorange);
-  z-index: 5;
-  filter: blur(100px);
+  background-color: #fff;
+
+  z-index: 1;
+}
+
+.link{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  z-index: 100;
 }

@@ -16,7 +16,7 @@ export const Skills = () => {
       <div className="flex lg:gap-4 flex-wrap flex-col md:flex-row justify-center ">
         {webSkills.map((skill) => (
           <SkillItems
-            key={skill.key}
+            index={skill.key}
             name={skill.name}
             about={skill.about}
             ic={skill.icon}

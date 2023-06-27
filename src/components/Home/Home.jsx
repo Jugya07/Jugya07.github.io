@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { ScrollButton, ScrollTop } from "../../components";
 import { useResultContext } from "../../contextAPI/ResultContextProvider";
 import Typed from "react-typed";
@@ -30,11 +28,9 @@ export const Home = () => {
       ref={homeSec}
     >
       <div className="flex flex-col lg:flex-row justify-center items-center lg:mb-10">
-        <FontAwesomeIcon
-          className="p-0 lg:p-10 m-auto"
-          icon={faUser}
-          size="10x"
-        />
+        <div className="w-52 lg:w-64 m-auto rounded-full shadow-xl shadow-gray-400 dark:shadow-xl dark:shadow-gray-600 duration-500 overflow-hidden">
+          <img src="/images/dp.png" alt="DP" className="w-52 lg:w-64" />
+        </div>
         <div className="w-fit pt-5 lg:pt-10 m-auto lg:mr-auto lg:m-0">
           <h1 className="text-center name text-3xl md:text-5xl lg:text-6xl p-3 text-primary dark:text-white ">
             I am Jugya K. Gogoi
