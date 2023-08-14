@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 import Fade from "react-reveal/Fade";
-import PropagateLoader from "react-spinners/PropagateLoader";
+// import PropagateLoader from "react-spinners/PropagateLoader";
 import "./global.css";
 import {
   Home,
@@ -12,36 +13,44 @@ import {
   Education,
 } from "./components";
 import { useResultContext } from "./contextAPI/ResultContextProvider";
+import { DotLoader } from "react-spinners";
 
 const App = () => {
   const { darkT, preLoad, setPreLoad } = useResultContext();
   useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
     setPreLoad(true);
     setTimeout(() => {
       setPreLoad(false);
     }, 3000);
-    const cursor = document.querySelector(".cursor");
-    window.addEventListener("pointermove", (event) => {
-      const { clientX, clientY } = event;
-      cursor.animate(
-        {
-          left: `${clientX - 20}px`,
-          top: `${clientY - 20}px`,
-        },
-        {
-          duration: 200,
-          fill: "forwards",
-        }
-      );
-    });
+    // const cursor = document.querySelector(".cursor");
+    // window.addEventListener("pointermove", (event) => {
+    //   const { clientX, clientY } = event;
+    //   cursor.animate(
+    //     {
+    //       left: `${clientX - 20}px`,
+    //       top: `${clientY - 20}px`,
+    //     },
+    //     {
+    //       duration: 200,
+    //       fill: "forwards",
+    //     }
+    //   );
+    // });
   }, []);
 
   return preLoad ? (
     <div className="flex justify-center h-screen items-center bg-primary ">
-      <PropagateLoader
+      <DotLoader
         color="#36d7b7"
         loading={preLoad}
-        size={15}
+        size={55}
         data-testid="loader"
       />
     </div>

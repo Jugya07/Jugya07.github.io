@@ -7,7 +7,6 @@ import "../../global.css";
 
 export const Navbar = () => {
   const { darkT, setDark, showNav, setShowNav } = useResultContext();
-
   const [showName, setShowName] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -56,9 +55,9 @@ export const Navbar = () => {
         <NavItems name="Contact" />
         <div className="text-center">
           <a
-            href="https://drive.google.com/file/d/1K2WdsZVLjPQx2tbQiffj1zVi9jxCqyZC/view?usp=sharing"
+            href="https://drive.google.com/file/d/1C6ZmIldUkJE201xS4trimFxdupzRqWgh/view?usp=drive_link"
             target={"_blank"}
-            download
+            // download
             type="button"
             className="mt-3 lg:mt-0 w-fit border border-yellow hover:text-red-500 dark:hover:text-secondary hover:border-red-500 dark:hover:border-secondary text-sm font-bold p-2 rounded-full dark:bg-secondary2"
           >
