@@ -7,12 +7,12 @@ export const HandleItems = ({ href, ic }) => {
   const ref = useRef(null);
   useEffect(() => {
     const xTo = gsap.quickTo(ref.current, "x", {
-      duration: 1,
-      ease: "elastic.out(1, 0.3",
+      duration: 0.1,
+      ease: "easeout",
     });
     const yTo = gsap.quickTo(ref.current, "y", {
-      duration: 1,
-      ease: "elastic.out(1, 0.3",
+      duration: 0.1,
+      ease: "easeout",
     });
     console.log(ref.current);
     const mouseMove = (e) => {
